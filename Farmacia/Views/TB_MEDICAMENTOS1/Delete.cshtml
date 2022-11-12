@@ -1,0 +1,97 @@
+﻿@model Farmacia.Models.TB_MEDICAMENTOS
+
+@{
+    ViewBag.Title = "Borrar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Borrar</h2>
+
+<h3>Estás seguro que querés borrar este medicamento?</h3>
+<div>
+    <h4>Medicamento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DESCRIPCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DESCRIPCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CANTIDAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CANTIDAD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRECIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRECIO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GRAMAJE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GRAMAJE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPO_PASTILLAS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPO_PASTILLAS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DOBLE_RECETA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DOBLE_RECETA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRESENTACION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRESENTACION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LABORATORIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LABORATORIO)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar al Listado", "Index")
+        </div>
+    }
+</div>
