@@ -26,8 +26,9 @@ namespace FARMACIA__TEST
             var viewResult = Assert.IsType<ViewResult>(result);
             var model = Assert.IsAssignableFrom<IEnumerable<Medicamentos>>(
                 viewResult.ViewData.Model);
+            Assert.Equal("Remedio1", model1[0].nombre);
             Assert.Equal(2, model.Count());
-            Assert.Equal("Remedio1", model.NOMBRE);
+
         }
 
 
